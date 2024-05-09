@@ -1,0 +1,15 @@
+- name: install mongodb
+  hosts: mongodb
+  become: yes
+  tasks:
+  - name: install mongodb
+    ansible.builtin.yum:
+      name: mongodb
+      state: installed
+    ansible.builtin.service:
+      name: mongodb
+      state: started
+      enabled: yes
+
+    
+    
