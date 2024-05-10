@@ -71,7 +71,7 @@
       state: installed
   
   - name: load mongo data
-    ansible.builtin.command: mongo --host mongodb.awsdevops.online < /app/schema/catalogue.js
+    ansible.builtin.command: mongo --host mongodb.awsdevops.site < /app/schema/catalogue.js
     
   - name: restart catalogue
     ansible.builtin.service:
