@@ -33,9 +33,19 @@
       state: directory
     when: dir.stat.exists == False # This is boolean so no queots required
 
-  - name: Download the application code 
-    ansible.builtin.shell: curl -o /tmp/catalogue.zip https://roboshop-builds.s3.amazonaws.com/catalogue.zip
-     
+  - name: Download catalogue code or artifacts 
+    ansible.builtin.get_url: 
+      url: https://roboshop-builds.s3.amazonaws.com/catalogue.zip
+      dest: /tmp
+  - name: extract catalogue artifacts to /app
+    ansible.builtin.unarchive:
+      src: /tmp/catalogue.zip
+      dest: /app
+
+  - name: install npm dependencies
+    ansible.builtin.yum:
+      name: npm
+      state: installed    
     
 
                              
