@@ -10,9 +10,23 @@ web.awsdevops.online
 [cart]
 cart.awsdevops.online
 
+[redis]
+redis.awsdevops.online
+
 [user]
 user.awsdevops.online
 
-[redis]
-redis.awsdevops.online
+[mysql]
+mysql.shipping.online
+
+[shipping]
+shipping.awsdevops.online
+
+[rabbitmq]
+rabbitmq.awsdevops.online
+
+[payments]
+payments.awsdevops.online
+
+
 
