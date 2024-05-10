@@ -1,0 +1,36 @@
+- name: setup catalogue microservice
+  hosts: catalogue
+  become: yes
+  tasks: 
+  - name: setup NPM(dependencies) source
+    ansible.buildin.shell: curl -sL https://rpm.nodesource.com/setup_lts.x | bash
+  - name: install NodeJS
+    ansible.builtin.yum:
+      name: nodejs
+      state: installed
+
+  - name: check user exist ot not if not exist create
+    ansible.builtin.command: id roboshop
+    register: roboid
+    ignore_errors: true
+  - name: create roboshp user
+    ansible.builtin.user:
+      name: roboshop
+    when: roboid.rc!= 0
+
+  - name: check directory exist or not if not create
+    ansible.builtin.command: mkdir /app
+    register: dir
+    ignore_errors: true
+  - name: create direcroty
+    ansible.builtin.file:
+      name: /app
+    when: dir.rc!=0
+
+                             
+  
+
+
+      
+
+
