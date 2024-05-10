@@ -7,11 +7,11 @@ catalogue.awsdevops.site
 [web]
 web.awsdevops.site
 
-[cart]
-cart.awsdevops.site
-
 [redis]
 redis.awsdevops.site
+
+[cart]
+cart.awsdevops.site
 
 [user]
 user.awsdevops.site
