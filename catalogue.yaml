@@ -45,7 +45,12 @@
   - name: install npm dependencies
     ansible.builtin.yum:
       name: npm
-      state: installed    
+      state: installed
+
+  - name: setup SystemD Catalogue Service
+    ansible.builtin.copy:
+      src: catalogue.service
+      dest: /etc/systemd/system/catalogue.service   
     
 
                              
