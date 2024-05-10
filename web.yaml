@@ -34,4 +34,10 @@
       dest: /usr/share/nginx/html
       remote_src: yes
 
+  - name: restart web service
+    ansible.builtin.service:
+      name: web
+      state: restarted
+      
+
     
