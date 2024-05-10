@@ -1,32 +1,32 @@
 [mongodb]
-mongodb.awsdevops.online
+mongodb.awsdevops.site
 
 [catalogue]
-catalogue.awsdevops.online
+catalogue.awsdevops.site
 
 [web]
-web.awsdevops.online
+web.awsdevops.site
 
 [cart]
-cart.awsdevops.online
+cart.awsdevops.site
 
 [redis]
-redis.awsdevops.online
+redis.awsdevops.site
 
 [user]
-user.awsdevops.online
+user.awsdevops.site
 
 [mysql]
-mysql.shipping.online
+mysql.shipping.site
 
 [shipping]
-shipping.awsdevops.online
+shipping.awsdevops.site
 
 [rabbitmq]
-rabbitmq.awsdevops.online
+rabbitmq.awsdevops.site
 
 [payments]
-payments.awsdevops.online
+payments.awsdevops.site
 
 
 
