@@ -22,7 +22,7 @@
     ansible.builtin.stat:
       path: /app
     register: dir
-  - name: create directory
+  - name: create /app directory
     ansible.builtin.file:
       path: /app
       stAte: directory
