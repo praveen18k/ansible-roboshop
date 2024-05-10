@@ -70,7 +70,7 @@
       name: mongodb-org-shell
       state: installed
   
-  - name: load mongo schema
+  - name: load mongo data
     ansible.builtin.command: mongo --host mongodb.awsdevops.online </app/schema/catalogue.js
     
   - name: restart catalogue
