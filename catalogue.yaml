@@ -25,8 +25,10 @@
   - name: create directory
     ansible.builtin.file:
       path: /app
-      stete: directory
+      stAte: directory
     when: dir.rc!=0
+
+  - name: 
     
 
                              
