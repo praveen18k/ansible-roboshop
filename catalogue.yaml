@@ -22,11 +22,16 @@
     ansible.builtin.stat:
       path: /app
     register: dir
+
+  - name: print the dir stat
+    ansible.builtin.debug:
+      msg: "output: {{dir}}"
+      
   - name: create /app directory
     ansible.builtin.file:
       path: /app
-      stAte: directory
-    when: dir.rc!=0
+      state: directory
+    when: dir.stat.exists == 'False'
 
   - name: 
     
