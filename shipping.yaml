@@ -29,7 +29,7 @@
   - when: dir.stat.exists == False
     name: create /app directory
     ansible.builtin.file:
-      name: /app
+      path: /app
       state: directory
 
   - name: download and unarchive the shipping artifacts
@@ -71,7 +71,7 @@
       name: mysql
       state: restarted
       enabled: true
-       
+
 
 
 
