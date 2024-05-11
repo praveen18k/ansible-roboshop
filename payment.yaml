@@ -7,9 +7,9 @@
       name: "{{item}}"
       state: installed
     loop:
-     - pythone36
-     - gcc
-     - python3-devel
+    - pythone36
+    - gcc
+    - python3-devel
     
   - name: chack roboshop user exist or not
     ansible.builtin.command: id roboshop
