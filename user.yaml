@@ -30,7 +30,7 @@
       msg: "OUTPUT: {{dir}}"
 
   - when: dir.stat.exists == False
-    name: create /app directory
+    path: create /app directory
     ansible.builtin.file:
       path: /app
       state: directory
