@@ -9,7 +9,7 @@
       name: nodejs
       state: installed
 
-  - name: check user exist ot not if not exist create
+  - name: check user exist or not if not exist create
     ansible.builtin.command: id roboshop
     register: roboid
     ignore_errors: true
