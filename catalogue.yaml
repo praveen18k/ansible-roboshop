@@ -29,12 +29,12 @@
     ansible.builtin.debug:
       msg: "output: {{dir}}"
 
-  - name: create /app directory
+  - when: dir.stat.exists == False # This is boolean so no queots required
+    name: create /app directory
     ansible.builtin.file:
       path: /app
       state: directory
-    when: dir.stat.exists == False # This is boolean so no queots required
-
+    
   - name: Download catalogue code or artifacts 
     ansible.builtin.get_url: 
       url: https://roboshop-builds.s3.amazonaws.com/catalogue.zip
