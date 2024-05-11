@@ -15,10 +15,10 @@
     register: roboid
     ignore_errors: true
 
-  - name: create roboshp user
+  - when: roboid.rc!= 0
+    name: create roboshp user
     ansible.builtin.user:
       name: roboshop
-    when: roboid.rc!= 0
 
   - name: check directory exist or not if not create
     ansible.builtin.stat:
