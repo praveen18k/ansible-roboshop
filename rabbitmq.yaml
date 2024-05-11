@@ -13,5 +13,9 @@
       name: rabbitmq-server
       state: installed
 
-  - name: add user for rabbitmq
+  - name: restart rabbitmq
+    ansible.builtin.service:
+      name: rabbitmq-server
+      state: restarted
+      enabled: true
      
