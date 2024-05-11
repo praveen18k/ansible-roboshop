@@ -17,7 +17,7 @@ cart.awsdevops.site
 user.awsdevops.site
 
 [mysql]
-mysql.shipping.site
+mysql.awsdevops.site
 
 [shipping]
 shipping.awsdevops.site

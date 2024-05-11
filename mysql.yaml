@@ -1,0 +1,6 @@
+- name: disable mysql 8 version database
+  hosts: mysql
+  become: yes
+  tasks:
+  ansible.builtin.yum:
+    name: my
