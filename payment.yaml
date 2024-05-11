@@ -36,6 +36,31 @@
       path: /app
       state: directory
 
-  - name
+  - name: download and unarchive payments artifacts
+    ansible.builtin.unarchive:
+      src: https://roboshop-builds.s3.amazonaws.com/payment.zip
+      dest: /app
+      remote_src: yes
+  
+  - name: install dependencies
+    ansible.builtin.command: pip3.6 install -r requirements.txt
+    args:
+      chdir: /app
+
+  - name: copy payment service
+    ansible.builtin.copy:
+      src: payment.service
+      dest: /etc/systemd/system/payment.service 
+
+  - name: daemon reload
+    ansible.builtin.systemd:
+      daemon_reload: true
+
+  - name: start the payment service
+    ansible.builtin.service:
+      name: payment
+      state: started
+      enabled: yes
+
 
       
