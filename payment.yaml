@@ -33,7 +33,7 @@
   - when: dir.stat.exists == False
     name: crate /app directory
     ansible.builtin.file:
-      name: /app
+      path: /app
       state: directory
 
       
