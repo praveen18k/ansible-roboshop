@@ -25,8 +25,8 @@ shipping.awsdevops.site
 [rabbitmq]
 rabbitmq.awsdevops.site
 
-[payments]
-payments.awsdevops.site
+[payment]
+payment.awsdevops.site
 
 
 
