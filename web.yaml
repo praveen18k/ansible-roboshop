@@ -43,9 +43,9 @@
     ansible.builtin.systemd:
       daemon_reload: true
 
-  - name: restart web service
+  - name: restart nginx
     ansible.builtin.service:
-      name: web
+      name: nginx
       state: restarted
 
 
