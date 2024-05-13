@@ -64,11 +64,11 @@
       state: installed
 
   - name: load shipping component data
-    ansible.builtin.command: mysql -h mysql.awsdevops.site -uroot -pRoboShop@1 < /app/schema/shipping.sql 
+    ansible.builtin.shell: mysql -h mysql.awsdevops.site -uroot -pRoboShop@1 < /app/schema/shipping.sql 
 
   - name: restart and enable mysql
     ansible.builtin.service:
-      name: mysql
+      name: shipping
       state: restarted
       enabled: true
 
