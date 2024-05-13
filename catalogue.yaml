@@ -50,7 +50,6 @@
     ansible.builtin.command: npm install
     args:
       chdir: /app
-      state: installed
 
   - name: setup SystemD Catalogue Service
     ansible.builtin.copy:
