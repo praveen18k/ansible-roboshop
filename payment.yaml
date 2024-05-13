@@ -13,10 +13,10 @@
     
   - name: chack roboshop user exist or not
     ansible.builtin.command: id roboshop
-    register: out
+    register: output
     ignore_erros: true
 
-  - when: out.rc != 0
+  - when: output.rc != 0
     name: create roboshop user
     ansible.builtin.user:
       name: roboshop
