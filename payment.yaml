@@ -12,11 +12,11 @@
     - python3-devel
     
   - name: chack roboshop user exist or not
-    ansible.builtin.command: id roboshop
-    register: output
+    ansible.builtin.shell: id roboshop
+    register: out
     ignore_erros: true
 
-  - when: output.rc != 0
+  - when: out.rc != 0
     name: create roboshop user
     ansible.builtin.user:
       name: roboshop
