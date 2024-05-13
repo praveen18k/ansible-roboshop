@@ -10,11 +10,11 @@ web.awsdevops.site
 [redis]
 redis.awsdevops.site
 
-[cart]
-cart.awsdevops.site
-
 [user]
 user.awsdevops.site
+
+[cart]
+cart.awsdevops.site
 
 [mysql]
 mysql.awsdevops.site
