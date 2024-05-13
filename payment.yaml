@@ -2,12 +2,12 @@
   hosts: payment
   become: yes
   tasks:
-  - name: install python 3.6
+  - name: Install Python
     ansible.builtin.yum:
       name: "{{item}}"
       state: installed
     loop:
-    - pythone36
+    - python36
     - gcc
     - python3-devel
 
