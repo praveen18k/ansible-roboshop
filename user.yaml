@@ -29,8 +29,8 @@
     ansible.builtin.debug:
       msg: "OUTPUT: {{dir}}"
 
-  - when: dir.stat.exists == 'False'
-    path: create /app directory
+  - when: dir.stat.exists == False
+    name: create /app directory
     ansible.builtin.file:
       path: /app
       state: directory
