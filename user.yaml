@@ -1,9 +1,9 @@
 - name: setup user component
-  host: user
+  hosts: user
   become: yes
   tasks:
   - name: setup NodeJS repo
-    ansible.builtin.shell: curl -sL https://rpm.nodesource.com/setup_lts.x | bash
+    ansible.builtin.shell: curl -sL "https://rpm.nodesource.com/setup_lts.x | bash"
 
   - name: install NodeJS
     ansible.builtin.yum:
