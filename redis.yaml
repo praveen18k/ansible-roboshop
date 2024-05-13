@@ -23,7 +23,7 @@
       replace: 0.0.0.
 
   - name: start and enable redis
-    ansible.builtin.systemd:
+    ansible.builtin.systemd_service:
       name: redis
       state: restarted
       enabled: yes
