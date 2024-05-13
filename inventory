@@ -1,5 +1,5 @@
 [mongodb]
-mongodb.awsdevops.site
+172.31.30.140
 
 [catalogue]
 catalogue.awsdevops.site
