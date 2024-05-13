@@ -10,14 +10,14 @@
     - pythone36
     - gcc
     - python3-devel
-    
-  - name: chack roboshop user exist or not
-    ansible.builtin.shell: id roboshop
-    register: out
-    ignore_erros: true
 
-  - when: out.rc != 0
-    name: create roboshop user
+  - name: check user exist or not if not exist create
+    ansible.builtin.command: id roboshop
+    register: roboid
+    ignore_errors: true
+
+  - when: roboid.rc!= 0
+    name: create roboshp user
     ansible.builtin.user:
       name: roboshop
 
